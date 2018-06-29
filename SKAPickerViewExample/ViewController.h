@@ -7,8 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SKAPickerView.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<SKAPickerViewDelegate>
+
+{
+    
+    NSArray *nameArray;
+    UITableView *newtable;
+    IBOutlet UIButton *main_btn;
+    IBOutlet UILabel *main_label;
+    SKAPickerView *objYHCPickerView;
+}
 
 
 @end

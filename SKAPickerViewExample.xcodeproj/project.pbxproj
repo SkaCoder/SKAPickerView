@@ -10,11 +10,12 @@
 		19B0AE4420579EE6005AF1BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B0AE4320579EE6005AF1BD /* main.m */; };
 		19B0AE4720579EE6005AF1BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B0AE4620579EE6005AF1BD /* AppDelegate.m */; };
 		19B0AE4A20579EE6005AF1BD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B0AE4920579EE6005AF1BD /* ViewController.m */; };
-		19B0AE4D20579EE6005AF1BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B0AE4B20579EE6005AF1BD /* Main.storyboard */; };
 		19B0AE4F20579EE6005AF1BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B0AE4E20579EE6005AF1BD /* Assets.xcassets */; };
-		19B0AE5220579EE6005AF1BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B0AE5020579EE6005AF1BD /* LaunchScreen.storyboard */; };
 		19B0AE5D20579EE7005AF1BD /* SKAPickerViewExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B0AE5C20579EE7005AF1BD /* SKAPickerViewExampleTests.m */; };
 		19B0AE6820579EE7005AF1BD /* SKAPickerViewExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B0AE6720579EE7005AF1BD /* SKAPickerViewExampleUITests.m */; };
+		19B0AE7820579F3E005AF1BD /* SKAPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B0AE7720579F3E005AF1BD /* SKAPickerView.m */; };
+		19B0AE7A20579FBA005AF1BD /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19B0AE7920579FBA005AF1BD /* ViewController.xib */; };
+		19B0AE7C2057A0B0005AF1BD /* Active_Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 19B0AE7B2057A0B0005AF1BD /* Active_Arrow.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,9 +42,7 @@
 		19B0AE4620579EE6005AF1BD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		19B0AE4820579EE6005AF1BD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		19B0AE4920579EE6005AF1BD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		19B0AE4C20579EE6005AF1BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19B0AE4E20579EE6005AF1BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		19B0AE5120579EE6005AF1BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19B0AE5320579EE6005AF1BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19B0AE5820579EE6005AF1BD /* SKAPickerViewExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKAPickerViewExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B0AE5C20579EE7005AF1BD /* SKAPickerViewExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKAPickerViewExampleTests.m; sourceTree = "<group>"; };
@@ -51,6 +50,10 @@
 		19B0AE6320579EE7005AF1BD /* SKAPickerViewExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKAPickerViewExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B0AE6720579EE7005AF1BD /* SKAPickerViewExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKAPickerViewExampleUITests.m; sourceTree = "<group>"; };
 		19B0AE6920579EE7005AF1BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19B0AE7620579F3E005AF1BD /* SKAPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKAPickerView.h; sourceTree = "<group>"; };
+		19B0AE7720579F3E005AF1BD /* SKAPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKAPickerView.m; sourceTree = "<group>"; };
+		19B0AE7920579FBA005AF1BD /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		19B0AE7B2057A0B0005AF1BD /* Active_Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Active_Arrow.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,13 +104,12 @@
 		19B0AE4120579EE6005AF1BD /* SKAPickerViewExample */ = {
 			isa = PBXGroup;
 			children = (
+				19B0AE7520579EF8005AF1BD /* SKAPickerView */,
 				19B0AE4520579EE6005AF1BD /* AppDelegate.h */,
 				19B0AE4620579EE6005AF1BD /* AppDelegate.m */,
 				19B0AE4820579EE6005AF1BD /* ViewController.h */,
 				19B0AE4920579EE6005AF1BD /* ViewController.m */,
-				19B0AE4B20579EE6005AF1BD /* Main.storyboard */,
 				19B0AE4E20579EE6005AF1BD /* Assets.xcassets */,
-				19B0AE5020579EE6005AF1BD /* LaunchScreen.storyboard */,
 				19B0AE5320579EE6005AF1BD /* Info.plist */,
 				19B0AE4220579EE6005AF1BD /* Supporting Files */,
 			);
@@ -117,7 +119,9 @@
 		19B0AE4220579EE6005AF1BD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				19B0AE7B2057A0B0005AF1BD /* Active_Arrow.png */,
 				19B0AE4320579EE6005AF1BD /* main.m */,
+				19B0AE7920579FBA005AF1BD /* ViewController.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -138,6 +142,15 @@
 				19B0AE6920579EE7005AF1BD /* Info.plist */,
 			);
 			path = SKAPickerViewExampleUITests;
+			sourceTree = "<group>";
+		};
+		19B0AE7520579EF8005AF1BD /* SKAPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				19B0AE7620579F3E005AF1BD /* SKAPickerView.h */,
+				19B0AE7720579F3E005AF1BD /* SKAPickerView.m */,
+			);
+			name = SKAPickerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,9 +259,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19B0AE5220579EE6005AF1BD /* LaunchScreen.storyboard in Resources */,
+				19B0AE7C2057A0B0005AF1BD /* Active_Arrow.png in Resources */,
+				19B0AE7A20579FBA005AF1BD /* ViewController.xib in Resources */,
 				19B0AE4F20579EE6005AF1BD /* Assets.xcassets in Resources */,
-				19B0AE4D20579EE6005AF1BD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +288,7 @@
 			files = (
 				19B0AE4A20579EE6005AF1BD /* ViewController.m in Sources */,
 				19B0AE4720579EE6005AF1BD /* AppDelegate.m in Sources */,
+				19B0AE7820579F3E005AF1BD /* SKAPickerView.m in Sources */,
 				19B0AE4420579EE6005AF1BD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,25 +323,6 @@
 			targetProxy = 19B0AE6420579EE7005AF1BD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		19B0AE4B20579EE6005AF1BD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				19B0AE4C20579EE6005AF1BD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		19B0AE5020579EE6005AF1BD /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				19B0AE5120579EE6005AF1BD /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		19B0AE6A20579EE7005AF1BD /* Debug */ = {
