@@ -19,14 +19,13 @@
 {
     UIPickerView *pickerView_new;
     UIToolbar *picketToolbar;
-     UISearchBar *searchBar_new;
+    UISearchBar *searchBar_new;
     NSArray *arrRecords;
-   id <SKAPickerViewDelegate> delegate;
-    
+    id <SKAPickerViewDelegate> delegate;
     NSUInteger refer_row;
-    
     BOOL searchEnabled;
  }
+
 @property (nonatomic, strong) NSMutableArray *searchResult;
 @property (nonatomic, assign) CGRect passRect;
 @property (nonatomic, retain) NSArray *arrRecords;
@@ -36,6 +35,5 @@
 -(id)initWithFrame:(CGRect)frame withNSArray:(NSArray *)arrValues;
 
 -(void)showPicker;
-
 
 @end

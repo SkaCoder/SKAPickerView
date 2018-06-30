@@ -1,7 +1,6 @@
 //
 //  ViewController.m
 //  SKAPickerViewExample
-//
 //  Created by Alok Singh on 13/03/18.
 //  Copyright © 2018 Alok Singh. All rights reserved.
 //
@@ -21,11 +20,9 @@
     
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-}
-
+ }
 
 - (IBAction)btnShowPickerClick:(id)sender {
-    
     
     objYHCPickerView = [[SKAPickerView alloc] initWithFrame:CGRectMake(0, 467, 414, 270) withNSArray:nameArray];
     
@@ -38,14 +35,12 @@
     [self.view addSubview:objYHCPickerView];
     
     [objYHCPickerView showPicker];
-}
+ }
 
--(void)didSelectItem:(NSString *)item;
-{
+-(void)didSelectItem:(NSString *)item{
     main_label.text=item;
     NSLog(@"%@",item);
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -4,7 +4,6 @@
 //
 //  Created by Alok Singh on 13/03/18.
 //  Copyright © 2018 Alok Singh. All rights reserved.
-//
 
 #import "SKAPickerView.h"
 
@@ -20,7 +19,8 @@
     return self;
 }
 
--(void)showPicker{
+
+-(void)showPicker {
     
     self.userInteractionEnabled = TRUE;
     self.backgroundColor = [UIColor clearColor];
@@ -46,9 +46,13 @@
     searchBar_new.tag = 1;
     //searchBar_new.barStyle = UIBarStyleBlackTranslucent;
     
+    
+    
     searchBar_new.backgroundColor = [UIColor clearColor];
     searchBar_new.delegate = self;
     searchBar_new.userInteractionEnabled = TRUE;
+    
+    //searchBar_new.barTintColor=[UIColor colorWithRed:35.0/255.0 green:141.0/255.0 blue:190.0/255.0 alpha:1.0];
     
     
     UIBarButtonItem *flexible = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
@@ -66,7 +70,7 @@
     [self addSubview:pickerView_new];
     [self addSubview:picketToolbar];
     [picketToolbar addSubview:searchBar_new];
-}
+ }
 
 // returns the number of 'columns' to display.
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
@@ -75,24 +79,29 @@
 }
 
 // returns the # of rows in each component..
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
-    
-    if (searchEnabled) {
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    if (searchEnabled)
+    {
         return self.searchResult.count;
-    }else{
+    }
+    else{
         return self.arrRecords.count;
     }
-}
+ }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     
-    if (searchEnabled) {
+    if (searchEnabled)
+    {
         return [self.searchResult objectAtIndex:row];
-    }else{
+    }
+    else
+    {
         return [self.arrRecords objectAtIndex:row];
     }
     
-}
+ }
 
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
@@ -100,22 +109,24 @@
     if (searchEnabled) {
         
         [self.delegate didSelectItem:[self.searchResult objectAtIndex:row]];
+        refer_row=row;
     }else{
         
         [self.delegate didSelectItem:[arrRecords objectAtIndex:row]];
+        refer_row=row;
     }
     
      refer_row=row;
  }
 
--(void)btnDoneClick
-{
+-(void)btnDoneClick{
     
     if (searchEnabled) {
         
         [self.delegate didSelectItem:[self.searchResult objectAtIndex:refer_row]];
-    }else{
-        
+    }
+    else
+    {
         [self.delegate didSelectItem:[arrRecords objectAtIndex:refer_row]];
     }
     
@@ -123,21 +134,18 @@
     pickerView_new.hidden=YES;
 }
 
-
 #pragma mark - Search delegate methods
 
-- (void)filterContentForSearchText:(NSString*)searchText
-{
+- (void)filterContentForSearchText:(NSString*)searchText{
     NSPredicate *resultPredicate = [NSPredicate
                                     predicateWithFormat:@"SELF CONTAINS[cd] %@",
                                     searchText];
-    
     _searchResult = [arrRecords filteredArrayUsingPredicate:resultPredicate];
+    
     [pickerView_new reloadAllComponents];
 }
 
-- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
-{
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
     if (searchBar.text.length == 0) {
         searchEnabled = NO;
         [pickerView_new reloadAllComponents];
@@ -155,22 +163,23 @@
             //pickerView.separatorStyle = UITableViewCellSeparatorStyleNone;
             [pickerView_new reloadAllComponents];
             _lblHeader.hidden=NO;
-        }else{
+        }
+        else
+        {
             _lblHeader.hidden=YES;
         }
     }
     
-}
+    refer_row=0;
+ }
 
--(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
-{
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     [searchBar resignFirstResponder];
     searchEnabled = YES;
     [self filterContentForSearchText:searchBar.text];
 }
 
--(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
-{
+-(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
     [searchBar resignFirstResponder];
     [searchBar setText:@""];
     searchEnabled = NO;
