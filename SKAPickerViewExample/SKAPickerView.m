@@ -118,7 +118,7 @@
     
      refer_row=row;
  }
-//git clone git@github.com:/myrepo.git
+
 -(void)btnDoneClick{
     
     if (searchEnabled) {
